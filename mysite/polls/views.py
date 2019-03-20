@@ -21,9 +21,11 @@ def index(request):
 
 def detail(request, question_id):
     '''
-    查看所有问题
+    查看所有w问题
     :param request:
     :param question_id:
     :return:
     '''
     question = get_object_or_404(Question)
+    return render(request, 'polls/detail.html', {'question':question})
+
